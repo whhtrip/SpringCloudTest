@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://www.mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.interworking.mybatisTest.mapper.UserMapper">
+    <resultMap id="BaseMap" type="com.interworking.mybatisTest.domain.User">
+        <id column="user_id" property="userId"></id>
+    </resultMap>
+    <select id="selectAllUser" resultType="com.interworking.mybatisTest.domain.User">
+        select user_id userId,user_name username,user_birthday userBirthday,create_time createTime from user_tb
+    </select>
+</mapper>

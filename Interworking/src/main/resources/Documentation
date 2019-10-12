@@ -1,0 +1,21 @@
+该文档记录了本项目搭建和运行情况
+
+SpringBoot版本信息
+1，数据源
+    依赖-->配置文件中配置->代码中配置->指定数据源类型
+    常用数据源：
+        Tomcat中自带的JDBC数据源
+        Durid数据源
+        Dbcp数据源，Dbcp2
+    SpringBoot默认支持的数据源：dbcp，dbcp2，tomcat，hikari
+    SpringBoot选择数据源优先级别：tomcat>HikariCP>DBCP>DBCP2(如果想要使用非默认连接池，需要指定类型type)
+    各种数据源之间的差别：
+
+    配置数据源：自动选择的有HikariCP、dbcp、tomcat，druid数据源没有自动选择成功
+2，集成Mybatis
+    依赖-->配置mapper.xml-->配置mapperBean-->配置
+    使用SpringBoot集成的Mybatis
+
+3，集成Consul
+    依赖-->配置
+    不同的SpringBoot版本集成Consul的方式不同：不同的SpringBoot版本，不同的SpringCloud版本，不同的工具集成方式。
