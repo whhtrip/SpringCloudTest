@@ -11,7 +11,7 @@
     <groupId>com.interworking</groupId>
     <artifactId>demo</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>demo</name>
+    <name>interworking</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
@@ -48,11 +48,11 @@
             <version>3.2.0</version>
         </dependency>-->
         <!--Tomcat数据源-->
-        <dependency>
+        <!--<dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-tomcat</artifactId>
             <scope>provided</scope>
-        </dependency>
+        </dependency>-->
         <!--dbcp数据源-->
         <!--<dependency>
             <groupId>commons-dbcp</groupId>
@@ -60,16 +60,16 @@
             <version>1.4</version>
         </dependency>-->
         <!--dbcp2数据源-->
-        <!--<dependency>
+        <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-dbcp2</artifactId>
-        </dependency>-->
+        </dependency>
         <!--druid数据源-->
-        <dependency>
+        <!--<dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>druid</artifactId>
             <version>1.1.10</version>
-        </dependency>
+        </dependency>-->
 
         <!--集成MyBatis-->
         <dependency>
@@ -101,7 +101,7 @@
             <artifactId>spring-cloud-commons</artifactId>
             <version>2.1.2.RELEASE</version>
         </dependency>-->
-        <dependency>
+        <!--<dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-consul-discovery</artifactId>
             <exclusions>
@@ -117,17 +117,75 @@
                     <groupId>com.netflix.hystrix</groupId>
                     <artifactId>hystrix-core</artifactId>
                 </exclusion>
-                <!-- zuul 服务调用出错的jar包冲突 -->
+                &lt;!&ndash; zuul 服务调用出错的jar包冲突 &ndash;&gt;
                 <exclusion>
                     <groupId>org.springframework.cloud</groupId>
                     <artifactId>spring-cloud-netflix-core</artifactId>
                 </exclusion>
             </exclusions>
-        </dependency>
-        <dependency>
+        </dependency>-->
+       <!-- <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-config</artifactId>
+        </dependency>-->
+
+        <!--redis-->
+        <dependency>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
+            <version>2.9.0</version>
         </dependency>
+
+        <!--Servlet支持-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <!--tomcat对jsp的支持-->
+        <dependency>
+            <groupId>org.apache.tomcat.embed</groupId>
+            <artifactId>tomcat-embed-jasper</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <!--JavaServer Pages Standard Tag Library，JSP标准标签库-->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>jstl</artifactId>
+        </dependency>
+        <!--HTML模板-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
+       <!-- <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.7</version>
+        </dependency>-->
+
+        <dependency>
+            <groupId>net.sf.json-lib</groupId>
+            <artifactId>json-lib</artifactId>
+            <version>2.4</version>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.7</version>
+            <scope>compile</scope>
+        </dependency>
+
+
+        <!--ActiveMQ-->
+        <!--<dependency>
+            <groupId>org.apache.activemq</groupId>
+            <artifactId>activemq-all</artifactId>
+            <version>5.13.3</version>
+        </dependency>-->
+        <!--<dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+        </dependency>-->
     </dependencies>
     <dependencyManagement>
         <dependencies>

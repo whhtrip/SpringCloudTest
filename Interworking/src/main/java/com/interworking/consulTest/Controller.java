@@ -1,22 +1,21 @@
+/*
 package com.interworking.consulTest;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cloud.client.ServiceInstance;
-import org.springframework.cloud.consul.discovery.ConsulDiscoveryClient;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.net.URI;
-import java.net.URL;
-import java.util.List;
 import java.util.Map;
 
+*/
 /**
  * @author:WangHongHao
  * @date:19-10-12创建
  * @date：修改
  * @description：
- */
+ *//*
+
 @RestController
 @RequestMapping("consul")
 public class Controller {
@@ -48,3 +47,4 @@ public class Controller {
         return allInstances;
     }
 }
+*/

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:elasticesearch="http://www.springframework.org/schema/data/elasticsearch"
+       xmlns:elasticsearch="http://www.springframework.org/schema/data/elasticsearch"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/data/elasticsearch http://www.springframework.org/schema/data/elasticsearch/spring-elasticsearch.xsd"> <!-- Spring data 自动扫描es repository接口，生成实现类 -->
+    <elasticsearch:repositories
+            base-package="com.elasticsearch.dao"></elasticsearch:repositories> <!-- ip:port换成具体的ip和端口，多个以逗号分隔 -->
+    <elasticesearch:transport-client id="client" cluster-name="elasticsearch"
+                                     cluster-nodes="192.168.179.131:9200"></elasticesearch:transport-client> <!-- es操作对象-->
+    <bean id="elasticsearchTemplate" class="org.springframework.data.elasticsearch.core.ElasticsearchTemplate">
+        <constructor-arg name="client" ref="client"></constructor-arg>
+    </bean>
+    <!--<bean id="customUserRepository" class="com.elasticsearch.dao.ElasticSearchDao" abstract="true"></bean>-->
+</beans>

@@ -7,4 +7,17 @@
     <select id="selectAllUser" resultType="com.interworking.mybatisTest.domain.User">
         select user_id userId,user_name username,user_birthday userBirthday,create_time createTime from user_tb
     </select>
+    <insert id="inserUser" useGeneratedKeys="true" keyProperty="userId" parameterType="com.interworking.mybatisTest.domain.User">
+        insert into user_tb (user_name,user_birthday,create_time)
+        values(#{username,jdbcType=VARCHAR},#{userBirthday,jdbcType=DATE},#{createTime,jdbcType=DATE})
+    </insert>
+
+    <insert id="insertUserWithId" parameterType="com.interworking.mybatisTest.domain.User">
+        insert into user_tb (user_id,user_name,user_birthday,create_time)
+        values(#{userId,jdbcType=INTEGER},#{username,jdbcType=VARCHAR},#{userBirthday,jdbcType=DATE},#{createTime,jdbcType=DATE})
+    </insert>
+
+    <update id="updateUser" useGeneratedKeys="true" keyProperty="userId" parameterType="com.interworking.mybatisTest.domain.User">
+        update user_tb set user_name = "张飞" where user_id = 5
+    </update>
 </mapper>

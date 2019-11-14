@@ -17,6 +17,22 @@ public class User {
     public User() {
     }
 
+    @Override
+    public String toString() {
+        return "User{" +
+                "userId=" + userId +
+                ", username='" + username + '\'' +
+                ", userBirthday=" + userBirthday +
+                ", createTime=" + createTime +
+                '}';
+    }
+
+    public User(String username, Date userBirthday, Date createTime) {
+        this.username = username;
+        this.userBirthday = userBirthday;
+        this.createTime = createTime;
+    }
+
     public User(Integer userId, String username, Date userBirthday, Date createTime) {
         this.userId = userId;
         this.username = username;
