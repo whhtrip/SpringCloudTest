@@ -1,0 +1,10 @@
+定时任务：
+    Jdk定时任务：
+        线程式定时:使用线程睡眠
+        Timer和TimerTask定时：定时和任务结合
+        ScheduledExecutorService线程池式定时：
+    Spring定时任务：
+        ScheduledTimerTask
+        Spring-Task
+    Quartz定时任务：
+    SpringBoot注解实现定时任务启动类添加注解：@EnableScheduling
