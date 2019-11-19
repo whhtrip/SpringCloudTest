@@ -102,8 +102,8 @@ public class EmailTest {
     }
 
     public static void main(String[] args) {
-        //EmailTest addTest = new EmailTest();
-        //addTest.appadd();
+        EmailTest addTest = new EmailTest();
+        addTest.appadd();
        /* Map<Object, Object> map = new HashMap<>();
         dealMap(map);
         System.out.println(map);*/
@@ -112,7 +112,7 @@ public class EmailTest {
         //System.out.println(uuid);
         //long l = System.currentTimeMillis();
         //System.out.println(l);
-        md5();
+        //md5();
     }
 
     public static void dealMap(Map map) {
